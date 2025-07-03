@@ -2,10 +2,6 @@
 
 rm -rf .repo/local_manifests; \
 
-#repo init -u https://github.com/crdroidandroid/android -b 15.0 --git-lfs; \
-#repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
-#repo init -u https://github.com/ProjectInfinity-X/manifest -b 15 --git-lfs; \
-#repo init -u https://github.com/ProjectMatrixx/android -b 15.0 --git-lfs; \
 repo init -u https://github.com/AxionAOSP/android.git -b lineage-22.2 --git-lfs; \
 
 rm -rf prebuilts/clang/host/linux-x86; \
@@ -33,7 +29,6 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware v
 
 # Kernel
 git clone https://github.com/SenseiiX/fusionX_sm8250 -b exp-nxt kernel/xiaomi/munch; \
-cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 # Hardware Xiaomi
 git clone https://github.com/SenseiiX/android_hardware_xiaomi hardware/xiaomi; \
