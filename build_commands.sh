@@ -24,7 +24,7 @@ rm -rf packages/resources/devicesettings; \
 
 # Device Tree
 #git clone https://github.com/SenseiiX/android_device_xiaomi_munch device/xiaomi/munch; \
-git clone https://github.com/SenseiiX/android_device_xiaomi_munch -b axion device/xiaomi/munch; \
+git clone https://github.com/SenseiiX/android_device_xiaomi_munch device/xiaomi/munch; \
 
 # Munch Vendor
 git clone https://github.com/SenseiiX/android_vendor_xiaomi_munch vendor/xiaomi/munch; \
