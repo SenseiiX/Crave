@@ -29,7 +29,6 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware v
 
 # Kernel
 git clone https://github.com/SenseiiX/fusionX_sm8250 -b exp-nxt kernel/xiaomi/munch; \
-cd kernel/xiaomi/munch && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 # Hardware Xiaomi
 git clone https://github.com/SenseiiX/android_hardware_xiaomi hardware/xiaomi; \
