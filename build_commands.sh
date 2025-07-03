@@ -2,11 +2,6 @@
 
 rm -rf .repo/local_manifests; \
 
-#repo init -u https://github.com/crdroidandroid/android -b 15.0 --git-lfs; \
-#repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
-#repo init -u https://github.com/ProjectInfinity-X/manifest -b 15 --git-lfs; \
-#repo init -u https://github.com/ProjectMatrixx/android -b 15.0 --git-lfs; \
-#repo init -u https://github.com/AxionAOSP/android.git -b lineage-22.2 --git-lfs; \
 repo init -uhttps://github.com/GenesisOS/manifest.git -b verve-qpr2 --git-lfs; \
 
 rm -rf prebuilts/clang/host/linux-x86; \
