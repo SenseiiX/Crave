@@ -32,7 +32,8 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware v
 git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
-git clone https://github.com/SenseiiX/android_hardware_xiaomi hardware/xiaomi; \
+#git clone https://github.com/SenseiiX/android_hardware_xiaomi hardware/xiaomi; \
+git clone https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi; \
 
 # Hardware Dolby
 git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
