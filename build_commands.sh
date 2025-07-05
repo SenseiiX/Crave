@@ -2,8 +2,8 @@
 
 rm -rf .repo/local_manifests; \
 
-#repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
-repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
+repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
+#repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
 
 rm -rf prebuilts/clang/host/linux-x86; \
 
