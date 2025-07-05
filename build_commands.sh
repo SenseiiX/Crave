@@ -2,8 +2,8 @@
 
 rm -rf .repo/local_manifests; \
 
-repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
-#repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
+#repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
+repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
 
 rm -rf prebuilts/clang/host/linux-x86; \
 
@@ -20,7 +20,7 @@ rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 
 # Device Tree
-git clone https://github.com/SenseiiX/android_device_xiaomi_munch -b crdroid device/xiaomi/munch; \
+git clone https://github.com/SenseiiX/android_device_xiaomi_munch -b matrixx device/xiaomi/munch; \
 
 # Munch Vendor
 git clone https://github.com/SenseiiX/android_vendor_xiaomi_munch vendor/xiaomi/munch; \
