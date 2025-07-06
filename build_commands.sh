@@ -22,7 +22,7 @@ rm -rf packages/resources/devicesettings; \
 git clone https://github.com/SenseiiX/android_device_xiaomi_munch device/xiaomi/munch; \
 
 # Munch Vendor
-git clone https://github.com/SenseiiX/android_vendor_xiaomi_munch vendor/xiaomi/munch; \
+git clone https://github.com/munch-devs/android_vendor_xiaomi_munch vendor/xiaomi/munch; \
 
 # Munch Firmware
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
