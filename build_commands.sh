@@ -10,6 +10,7 @@ rm -rf prebuilts/clang/host/linux-x86; \
 
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
+rm -rf device/xiaomi/sm8250-common; \
 rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch-firmware; \
@@ -19,10 +20,13 @@ rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 
 # Device Tree
-git clone https://github.com/SenseiiX/android_device_xiaomi_munch -b crdroid device/xiaomi/munch; \
+git clone https://github.com/Efeisot/android_device_xiaomi_munch -b crdroid device/xiaomi/munch; \
+
+# Device Common
+git clone https://github.com/Efeisot/android_device_xiaomi_sm8250-common device/xiaomi/sm8250-common; \
 
 # Munch Vendor
-git clone https://github.com/munch-devs/android_vendor_xiaomi_munch vendor/xiaomi/munch; \
+git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch vendor/xiaomi/munch; \
 
 # Munch Firmware
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
