@@ -44,9 +44,5 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 # Miui Camera
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
-
 . build/envsetup.sh; \
-
 brunch munch; \
-#riseup munch eng && rise b; \
-#lunch infinity_munch-user; \
