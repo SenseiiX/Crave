@@ -44,4 +44,5 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 . build/envsetup.sh; \
-brunch munch; \
+lineage_munch-bpla-user && mka bacon
+#brunch munch; \
