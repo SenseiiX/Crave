@@ -44,5 +44,4 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 . build/envsetup.sh; \
-axion munch user gms pico -b
-#brunch munch; \
+brunch munch; \
