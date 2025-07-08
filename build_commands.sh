@@ -27,12 +27,11 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch vendor/xiaom
 # Munch Firmware
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
-# Kernel
+# Kernel (N0kernel / FusionX)
 #git clone https://github.com/SenseiiX/fusionX_sm8250 -b exp-nxt kernel/xiaomi/munch; \
 git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
-#git clone https://github.com/SenseiiX/android_hardware_xiaomi hardware/xiaomi; \
 git clone https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi; \
 
 # Hardware Dolby
@@ -41,7 +40,7 @@ git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
 # Device Settings
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 
-# Miui Camera
+# MiCam
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 . build/envsetup.sh; \
