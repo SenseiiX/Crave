@@ -1,7 +1,7 @@
 #! /bin/bash
 
 rm -rf .repo/local_manifests
-#repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
+repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
 
 rm -rf prebuilts/clang/host/linux-x86
 
