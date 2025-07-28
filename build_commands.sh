@@ -29,6 +29,10 @@ rm -rf out/target/product/munch
 #git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
 #git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
 
+# Flipflap
+rm -rf packages/apps/FlipFlap
+git clone https://github.com/LineageOS/android_packages_apps_FlipFlap packages/apps/FlipFlap
+
 # Device Settings
 rm -rf packages/resources/devicesettings
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings --depth 1 -b aosop-16 packages/resources/devicesettings
