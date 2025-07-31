@@ -1,41 +1,47 @@
 #! /bin/bash
 
-rm -rf .repo/local_manifests
-repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
+rm -rf .repo/local_manifests; \
 
-rm -rf prebuilts/clang/host/linux-x86
+repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
 
-git clone https://github.com/SenseiiX/local_manifest --depth 1 -b lunaris .repo/local_manifests
+rm -rf prebuilts/clang/host/linux-x86; \
 
-/opt/crave/resync.sh 
+/opt/crave/resync.sh; \
 
-# ======CLEAN BUILD=======
-rm -rf out/target/product/munch
-#rm -rf device/xiaomi/munch
-#rm -rf kernel/xiaomi/munch
-#rm -rf vendor/xiaomi/munch
-#rm -rf vendor/xiaomi/munch-firmware
-#rm -rf hardware/xiaomi
-#rm -rf hardware/dolby
-#rm -rf vendor/xiaomi/miuicamera
+rm -rf out/target/product/munch; \
+rm -rf device/xiaomi/munch; \
+rm -rf kernel/xiaomi/munch; \
+rm -rf vendor/xiaomi/munch; \
+rm -rf vendor/xiaomi/munch-firmware; \
+rm -rf hardware/xiaomi; \
+rm -rf hardware/dolby; \
+rm -rf vendor/xiaomi/miuicamera; \
+rm -rf packages/resources/devicesettings; \
 
-# ======CLEAN BUILD=======
-#git clone https://github.com/SenseiiX/android_device_xiaomi_munch -b lunaris device/xiaomi/munch
-#git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
-#git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
-#git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch
-#git clone https://github.com/munch-devs/android_hardware_xiaomi hardware/xiaomi
-#git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby
-#git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings
-#git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera
+# Device Tree
+git clone https://github.com/SenseiiX/android_device_xiaomi_munch -b lunaris device/xiaomi/munch; \
 
-# Flipflap
-rm -rf packages/apps/FlipFlap
-git clone https://github.com/LineageOS/android_packages_apps_FlipFlap packages/apps/FlipFlap
+# Munch Vendor
+git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
+
+# Munch Firmware
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
+
+# Kernel (N0kernel / FusionX)
+#git clone https://github.com/SenseiiX/fusionX_sm8250 -b exp-nxt kernel/xiaomi/munch; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
+
+# Hardware Xiaomi
+git clone https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi; \
+
+# Hardware Dolby
+git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
 
 # Device Settings
-rm -rf packages/resources/devicesettings
-git clone https://github.com/PocoF3Releases/packages_resources_devicesettings --depth 1 -b aosop-16 packages/resources/devicesettings
+git clone https://github.com/PocoF3Releases/packages_resources_devicesettings -b aosp-16 packages/resources/devicesettings; \
+
+# MiCam
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 # Settings App
 rm -rf packages/apps/Settings
