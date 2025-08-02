@@ -4,14 +4,14 @@ rm -rf .repo/local_manifests; \
 
 repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
 
-git clone https://github.com/SenseiiX/local_manifest -b lunaris .repo/local_manifest; \
+#git clone https://github.com/SenseiiX/local_manifest -b lunaris .repo/local_manifest; \
 
 rm -rf prebuilts/clang/host/linux-x86; \
 
 /opt/crave/resync.sh; \
 
 #rm -rf out/target/product/munch; \
-#rm -rf device/xiaomi/munch; \
+rm -rf device/xiaomi/munch; \
 #rm -rf kernel/xiaomi/munch; \
 #rm -rf vendor/xiaomi/munch; \
 #rm -rf vendor/xiaomi/munch-firmware; \
@@ -20,7 +20,7 @@ rm -rf prebuilts/clang/host/linux-x86; \
 #rm -rf vendor/xiaomi/miuicamera; \
 
 # Device Tree
-#git clone https://github.com/SenseiiX/android_device_xiaomi_munch -b lunaris device/xiaomi/munch; \
+git clone https://github.com/SenseiiX/android_device_xiaomi_munch -b lunaris device/xiaomi/munch; \
 
 # Munch Vendor
 #git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
