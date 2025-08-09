@@ -16,6 +16,7 @@ rm -rf vendor/xiaomi/munch-firmware; \
 rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
+rm -rf packages/resources/devicesettings; \
 
 # Device Tree
 git clone https://github.com/SenseiiX/android_device_xiaomi_munch -b inf-16 device/xiaomi/munch; \
@@ -37,16 +38,11 @@ git clone https://github.com/SenseiiX/android_hardware_xiaomi -b 16 hardware/xia
 git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
 
 # Device Settings
-rm -rf packages/resources/devicesettings; \
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings -b aosp-16 packages/resources/devicesettings; \
 
 # MiCam
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
-# Settings App
-rm -rf packages/apps/Settings
-git clone https://github.com/SenseiiX/packages_apps_Settings --depth 1 -b 16 packages/apps/Settings
-
 . build/envsetup.sh
-lunch lineage_munch-bp2a-user
+lunch infinity_munch-user
 m bacon
