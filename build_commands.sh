@@ -43,6 +43,29 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings -b
 # MiCam
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
-. build/envsetup.sh
-lunch infinity_munch-user
-m bacon
+# Build Vanilla Variant
+. build/envsetup.sh; \
+lunch infinity_munch-user && m bacon; \
+
+# Clear Previous Outputs
+rm -rf out/target/product/vanilla out/target/product/gapps; \
+
+# Rename Output Folder to "vanilla"
+cd out/target/product && \
+mv munch vanilla && \
+cd ../../..; \
+
+# Reconfigure for Full GApps Variant
+cd device/xiaomi/munch && \
+rm infinity_munch.mk && \
+mv gapps.txt infinity_munch.mk && \
+cd ../../..; \
+
+# Build Full GApps ROM
+. build/envsetup.sh; \
+lunch infinity_munch-user && m bacon; \
+
+# Rename Output Folder to "Gapps"
+cd out/target/product && \
+mv munch gapps && \
+cd ../../..; \
