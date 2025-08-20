@@ -4,8 +4,6 @@ rm -rf .repo/local_manifests; \
 
 repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
 
-#git clone https://github.com/SenseiiX/local_manifest -b lunaris .repo/local_manifest; \
-
 rm -rf prebuilts/clang/host/linux-x86; \
 
 /opt/crave/resync.sh; \
@@ -30,7 +28,6 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware v
 
 # Kernel (N0kernel / FusionX)
 git clone https://github.com/SenseiiX/fusionX_sm8250 -b stable-next kernel/xiaomi/munch; \
-#git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 git clone https://github.com/SenseiiX/android_hardware_xiaomi -b 16 hardware/xiaomi; \
@@ -49,6 +46,27 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 rm -rf packages/apps/Settings
 git clone https://github.com/SenseiiX/packages_apps_Settings --depth 1 -b 16 packages/apps/Settings
 
+# ---------- BUILD CORE GAPPS ----------
 . build/envsetup.sh
 lunch lineage_munch-bp2a-user
 m lunaris
+
+# Save output as "coregapps"
+cd out/target/product && \
+mv munch coregapps && \
+cd ../../..
+
+# ---------- BUILD FULL GAPPS ----------
+cd device/xiaomi/munch && \
+rm lineage_munch.mk && \
+mv fullgapps.txt lineage_munch.mk && \
+cd ../../..
+
+. build/envsetup.sh
+lunch lineage_munch-bp2a-user
+m lunaris
+
+# Save output as "fullgapps"
+cd out/target/product && \
+mv munch fullgapps && \
+cd ../../..
