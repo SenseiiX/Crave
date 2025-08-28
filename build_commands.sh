@@ -28,11 +28,11 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch -b 16 vendor
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
 # Kernel (N0kernel / FusionX)
-git clone https://github.com/SenseiiX/fusionX_sm8250 -b wip-next kernel/xiaomi/munch; \
+git clone https://github.com/SenseiiX/fusionX_sm8250 -b stable-next kernel/xiaomi/munch; \
 #git clone https://github.com/munch-devs/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
-git clone https://github.com/SenseiiX/android_hardware_xiaomi -b 16 hardware/xiaomi; \
+git clone https://github.com/munch-devs/android_hardware_xiaomi.git hardware/xiaomi; \
 
 # Hardware Dolby
 git clone https://github.com/munch-devs/android_hardware_dolby hardware/dolby; \
